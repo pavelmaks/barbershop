@@ -1038,6 +1038,9 @@ img {
 	width: 300px;
 	padding: 50px 80px;
 }
+.modal-show {
+	display: block;
+}
 
 .modal-close {
 	position: absolute;
