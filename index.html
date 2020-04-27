@@ -100,7 +100,7 @@
 					ПН—ПТ: С 10:00 ДО 22:00<br>
 					СБ—ВС: С 10:00 ДО 19:00
 				</p>
-				<a href="map.html" class="button">Как проехать</a>
+				<a href="map.html" class="button contacts-button-map">Как проехать</a>
 				<a href="contacts.html" class="button">Обратная связь</a>
 			</section>
 			<section class="appointment">
@@ -191,39 +191,16 @@
 	</section>
 	<section class="modal modal-map">
 		<h2 class="visually-hidden">Как до нас добраться</h2>
-		<p>
+
+		<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/sir_chaplin_barbershop/61796667246/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Sir Chaplin Барбершоп</a><a href="https://yandex.ru/maps/10748/pushkino/category/barber_shop/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Барбершоп в Пушкино</a><a href="https://yandex.ru/maps/10748/pushkino/category/hairdressers/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Парикмахерская в Пушкино</a><iframe src="https://yandex.ru/map-widget/v1/-/CWbQvE5j" width="766" height="560" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+		<p class="visually-hidden">
 			<img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул.Большая конюшенная 19/8, Санкт Петербург">
 		</p>
 		<button class="modal-close" type="button">Закрыть</button>
 	</section>
-	<script>
-
-		var link = document.querySelector('.login-link');
-		var popup = document.querySelector('.modal-login');
-		var form = popup.querySelector('form');
-		var close = document.querySelector('.modal-close');
-		var login = popup.querySelector('[name=login]');
-		var password = popup.querySelector('[name=password]');
-
-		link.addEventListener('click', function(evt) {
-			evt.preventDefault();
-			popup.classList.add('modal-show');
-			login.focus();
-		});
-
-		close.addEventListener('click', function(evt) {
-			evt.preventDefault();
-			popup.classList.remove('modal-show');
-		});
-
-		form.addEventListener('submit', function(evt) {
-			if (!login.value || !password.value) {
-				evt.preventDefault();
-				console.log("Нужно ввести логин и пароль");
-			}
-		});
-
-	</script>
+	<script src="js/popup.js"></script>
+	<script src="js/map.js"></script>
 </body>
 
 </html>
